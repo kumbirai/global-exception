@@ -16,18 +16,17 @@ import lombok.Data;
  * <br>
  *
  * @author Kumbirai 'Coach' Mundangepfupfu<br>
- * @date 20 May 2021<br>
  * @version 1.0<br>
  *
  * <b>Revision:</b>
  * <br>
- *					
+ * @date 20 May 2021<br>
  */
 @Data
 @AllArgsConstructor
 public class ExceptionResponse
 {
-	int status;
-	String reason;
-	ExceptionDetails exception;
+    int status;
+    String reason;
+    ExceptionDetails exception;
 }

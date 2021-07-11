@@ -5,10 +5,10 @@
  */
 package com.kumbirai.rest.webservices.exception;
 
-import java.util.Date;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
+
+import java.util.Date;
 
 /**
  * <p><b>Purpose:</b><br>
@@ -18,18 +18,17 @@ import lombok.Data;
  * <br>
  *
  * @author Kumbirai 'Coach' Mundangepfupfu<br>
- * @date 29 May 2021<br>
  * @version 1.0<br>
  *
  * <b>Revision:</b>
  * <br>
- *					
+ * @date 29 May 2021<br>
  */
 @Data
 @AllArgsConstructor
 public class ExceptionDetails
 {
-	private Date timestamp;
-	private String message;
-	private String details;
+    private Date timestamp;
+    private String message;
+    private String details;
 }
