@@ -22,7 +22,6 @@ import java.util.Date;
  *
  * <b>Revision:</b>
  * <br>
- * @date 29 May 2021<br>
  */
 @Data
 @AllArgsConstructor

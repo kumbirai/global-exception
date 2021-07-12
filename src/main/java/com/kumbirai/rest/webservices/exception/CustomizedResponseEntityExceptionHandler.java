@@ -31,7 +31,6 @@ import java.util.stream.Collectors;
  *
  * <b>Revision:</b>
  * <br>
- * @date 20 May 2021<br>
  */
 @ControllerAdvice
 @RestController
@@ -51,9 +50,9 @@ public class CustomizedResponseEntityExceptionHandler extends ResponseEntityExce
      * handleAllExceptions<br>
      * <br>
      *
-     * @param ex
-     * @param request
-     * @return<br> <br>
+     * @param ex      -
+     * @param request -
+     * @return <br> <br>
      */
     @ExceptionHandler(Exception.class)
     public final ResponseEntity<ExceptionResponse> handleAllExceptions(Exception ex, WebRequest request)
