@@ -17,6 +17,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 import java.util.Arrays;
 import java.util.Date;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
@@ -71,7 +72,8 @@ public class CustomizedResponseEntityExceptionHandler extends ResponseEntityExce
         return new ResponseEntity<>(new ExceptionResponse(HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST.getReasonPhrase(), new ExceptionDetails(new Date(), "Validation Failed", ex.getBindingResult()
                 .getAllErrors()
                 .stream()
-                .map(e -> String.format("%s->%s %s", e.getObjectName(), Arrays.asList(e.getCodes()), e.getDefaultMessage()))
+                .map(e -> String.format("%s->%s %s", e.getObjectName(), Arrays.asList(Optional.ofNullable(e.getCodes())
+                        .orElse(new String[]{})), e.getDefaultMessage()))
                 .collect(Collectors.toList())
                 .toString())), HttpStatus.BAD_REQUEST);
     }
